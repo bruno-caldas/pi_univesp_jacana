@@ -1,7 +1,29 @@
-asgiref @ file:///tmp/build/80754af9/asgiref_1625643473416/work
+asgiref==3.4.1
+ca=-certificates=2021.7.5
 certifi==2021.5.30
-Django @ file:///tmp/build/80754af9/django_1625585912945/work
-psycopg2 @ file:///tmp/build/80754af9/psycopg2_1612298595717/work
-pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
-sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1624965014186/work
+django==3.2.5
+krb5==1.19.2
+ld_impl_linux=-64=2.35.1
+libedit==3.1.20210216
+libffi==3.3
+libgcc=-ng=9.3.0
+libgomp==9.3.0
+libpq==12.2
+libstdcxx=-ng=9.3.0
+ncurses==6.2
+openssl==1.1.1k
+pip==21.2.4
+psycopg2==2.8.6
+python==3.9.6
+pytz==2021.1
+readline==8.1
+setuptools==52.0.0
+sqlite==3.36.0
+sqlparse==0.4.1
+tk==8.6.10
+typing_extensions==3.10.0.0
+tzdata==2021a
+wheel==0.37.0
+xz==5.2.5
+zlib==1.2.11
+gunicorn==20.1.0
