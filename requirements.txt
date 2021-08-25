@@ -1,5 +1,4 @@
 asgiref==3.4.1
-ca-certificates==2021.7.5
 certifi==2021.5.30
 django==3.2.5
 krb5==1.19.2
