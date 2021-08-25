@@ -2,7 +2,6 @@ asgiref==3.4.1
 certifi==2021.5.30
 django==3.2.5
 psycopg2==2.8.6
-python==3.9
 pytz==2021.1
 sqlite==3.36.0
 sqlparse==0.4.1
