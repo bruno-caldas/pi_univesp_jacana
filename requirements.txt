@@ -3,13 +3,12 @@ ca-certificates==2021.7.5
 certifi==2021.5.30
 django==3.2.5
 krb5==1.19.2
-ld_impl_linux=-64=2.35.1
 libedit==3.1.20210216
 libffi==3.3
-libgcc=-ng=9.3.0
+libgcc-ng==9.3.0
 libgomp==9.3.0
 libpq==12.2
-libstdcxx=-ng=9.3.0
+libstdcxx-ng==9.3.0
 ncurses==6.2
 openssl==1.1.1k
 pip==21.2.4
