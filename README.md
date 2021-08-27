@@ -20,4 +20,4 @@ Giovanna Cavassani de Godoy Bueno
 
 Tania Mendes Couto
 
-Vinicius Gomes Barbosa
+Vinicius G. Barbosa
