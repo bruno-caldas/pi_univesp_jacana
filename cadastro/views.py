@@ -1,10 +1,14 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
+from django.template import RequestContext
 from django.urls import reverse
 from django.views import generic
 
 from .models import Choice, Question
+from .models import Document
+from .forms import DocumentForm
 
+# import datetime
 
 class IndexView(generic.ListView):
     template_name = 'cadastro/index.html'
@@ -42,3 +46,29 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('cadastro:results', args=(question.id,)))
 
+# https://stackoverflow.com/questions/5871730/how-to-upload-a-file-in-django
+def test_form(request):
+    # Handle file upload
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(docfile = request.FILES['docfile'],
+                            nome_cachorro=request.POST["nome"],
+                            porte_cachorro=request.POST["porte"],
+                            idade_cachorro=request.POST["idade"],
+                            # dia_do_cadastro=datetime.date.today()
+                            )
+            newdoc.save()
+
+            # Redirect to the document list after POST
+            return HttpResponseRedirect(reverse('cadastro:test_form'))
+    else:
+        form = DocumentForm() # A empty, unbound form
+
+    # Load documents for the list page
+    documents = Document.objects.all()
+
+    # Render list page with the documents and the form
+    return render(request,
+        'cadastro/form.html',
+        {'documents': documents, 'form': form})

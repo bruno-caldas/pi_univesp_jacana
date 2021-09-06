@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Django File Upload Example</title>   
+    </head>
+    <body>
+    <!-- List of uploaded documents -->
+    {% if documents %}
+        <ul>
+        {% for document in documents %}
+            <ul>
+                <li><img width="300px" src="{{ document.docfile.url }}"><br>
+                    Nome do cachorro: {{ document.nome_cachorro }}
+                    Porte do cachorro: {{ document.porte_cachorro }}
+                    Idade do cachorro: {{ document.idade_cachorro }}
+                </li>
+            </ul>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url 'cadastro:test_form' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>{{ form.non_field_errors }}</p>
+            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+            <p>
+                {{ form.docfile.errors }}
+                {{ form.docfile }}
+            </p>
+            <p>Nome do cachorro: {{ form.nome }}</p>
+            <p>Porte do cachorro (P, M, G): {{ form.porte }}</p>
+            <p>Idade do cachorro: {{ form.idade }}</p>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+    </body>
+</html> 

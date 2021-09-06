@@ -30,3 +30,10 @@ class Choice(models.Model):
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
+class Document(models.Model):
+    # docfile = models.FileField(upload_to='documents/%Y/%m/%d')
+    # docfile = models.FileField(upload_to='cadastro/media')
+    docfile = models.FileField(upload_to='cadastro/media/%Y_%m_%d')
+    nome_cachorro = models.CharField(max_length=30)
+    porte_cachorro = models.CharField(max_length=30)
+    idade_cachorro = models.IntegerField(default=0)
