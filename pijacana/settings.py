@@ -105,7 +105,6 @@ WSGI_APPLICATION = 'pijacana.wsgi.application'
 if on_heroku:
     DATABASES = {}
     DATABASES['default'] = dj_database_url.parse(os.getenv('DATABASE_URL'), conn_max_age=600)
-    AWS_
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
