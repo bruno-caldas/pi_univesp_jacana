@@ -37,3 +37,4 @@ class Document(models.Model):
     nome_cachorro = models.CharField(max_length=30)
     porte_cachorro = models.CharField(max_length=30)
     idade_cachorro = models.IntegerField(default=0)
+    # pip install boto3 django-storages
