@@ -119,3 +119,20 @@ Link da reunião: https://drive.google.com/file/d/1JZm1xzCb_QMWzK0BPgdKcsgETj_xb
 - Foram definidos os primeiros passos do plano de ação;
 - Ficou definido que iremos analisar a documentação necessária para o desenvolvimento do projeto;
 - E para próxima reunião analisar o cronograma e definir os próximos passos do projeto juntamente com a documentação
+
+## 5. Reunião: Revisão do Plano de Ação
+
+### Data: 10/09/2021 19:10​
+
+### Participantes:
+
+- Bruno Caldas de Souza
+- Carolina Rosa Silva de Lucena - Orientadora
+- Eduardo Cabral de Souza
+- Vinicius Gomes Barbosa
+
+### Ata da reunião de hoje:
+
+- A orientadora Carolina verificou as correções e ajustes que seriam necessários para a finalização do Plano de ação;
+- A Carolina orientou para assistir as aulas da quinzena 2;
+- Eduardo ficou responsável pelas alterações e correções do plano de ação;
