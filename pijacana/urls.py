@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import RedirectView
 
-from cadastro.views import carrega_eventos, carrega_index, carrega_parceiros, test_form
+from cadastro.views import carrega_eventos, carrega_index, carrega_parceiros, mural_animais
 from cadastro import views
 
 urlpatterns = [
@@ -27,6 +27,6 @@ urlpatterns = [
     path('abrigo/', carrega_index, name="index"),
     path('abrigo/parceiros', carrega_parceiros, name="parceiros"),
     path('abrigo/eventos', carrega_eventos, name="eventos"),
-    path('abrigo/mural_animais', include("cadastro.urls"), name="mural_animais"),
+    path('abrigo/mural_animais', include("cadastro.urls")),
     #path('abrigo/mural_animais', test_form, name="mural_animais")
 ]

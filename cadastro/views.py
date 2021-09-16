@@ -47,7 +47,7 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('cadastro:results', args=(question.id,)))
 
 # https://stackoverflow.com/questions/5871730/how-to-upload-a-file-in-django
-def test_form(request):
+def mural_animais(request):
     # Handle file upload
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
@@ -61,7 +61,7 @@ def test_form(request):
             newdoc.save()
 
             # Redirect to the document list after POST
-            return HttpResponseRedirect(reverse('cadastro:test_form'))
+            return HttpResponseRedirect(reverse('cadastro:mural_animais'))
     else:
         form = DocumentForm() # A empty, unbound form
 
