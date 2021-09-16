@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
+
+from cadastro.views import carrega_eventos, carrega_index, carrega_parceiros, test_form
+from cadastro import views
 
 urlpatterns = [
-    path('', include('cadastro.urls')),
+    #path('', include('cadastro.urls')),
     path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='/abrigo/')),
+    path('abrigo/', carrega_index, name="index"),
+    path('abrigo/parceiros', carrega_parceiros, name="parceiros"),
+    path('abrigo/eventos', carrega_eventos, name="eventos"),
+    path('abrigo/mural_animais', include("cadastro.urls"), name="mural_animais"),
+    #path('abrigo/mural_animais', test_form, name="mural_animais")
 ]

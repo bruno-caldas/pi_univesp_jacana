@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projeto Kaotinho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'cadastro/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cadastro/main.css' %}">
+  </head>
+  <body>
+
+    <header>
+      <div align="center">
+        <h1>
+          Projeto Kaotinho
+        </h1>
+        <hr>
+      </div>
+      <div align="center">
+        <nav>
+          <a href="{% url 'index' %}">O abrigo</a> | 
+          <a href="{% url 'parceiros' %}"parceiros/">Nossos Parceiros</a> | 
+          <a href="{% url 'eventos' %}">Projetos e Eventos</a> | 
+          <a href="{% url 'mural_animais' %">Mural Fofura</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">      
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <footer>
+      <div align="center">
+        Este site esta sendo desenvolvido pelos alunos da UniVESP - Turma 2020 na disciplina de Projeto Integrador I
+      </div>
+    </footer>
+
+    <script src="{% static 'cadastro/ootstrap.min.js' %}">
+
+  </body>
+
+</html>
