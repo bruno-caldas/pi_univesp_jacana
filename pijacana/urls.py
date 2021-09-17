@@ -28,5 +28,6 @@ urlpatterns = [
     path('abrigo/parceiros', carrega_parceiros, name="parceiros"),
     path('abrigo/eventos', carrega_eventos, name="eventos"),
     path('abrigo/mural_animais', include("cadastro.urls")),
+    path('login/', include("login_users.urls")),
     #path('abrigo/mural_animais', test_form, name="mural_animais")
 ]
