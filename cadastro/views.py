@@ -72,15 +72,3 @@ def mural_animais(request):
     return render(request,
         'cadastro/form.html',
         {'documents': documents, 'form': form})
-
-
-#CARREGA AS PÁGINAS PRINCIPAIS
-
-def carrega_index(request):
-    return render(request, "index.html")
-
-def carrega_parceiros(request):
-    return render(request, "templates/../parceiros.html")
-
-def carrega_eventos(request):
-    return render(request, "projetos_eventos.html")
