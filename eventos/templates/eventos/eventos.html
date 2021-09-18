@@ -1,0 +1,27 @@
+{% extends 'templates/../model-page.html' %}
+
+{% block content %}
+<section>
+    <h2>Projetos e Eventos</h2>
+    <article>Confira nossos Projetos e Eventos.</article>
+    
+</section>
+
+<section>
+    {% for evento in eventos %}
+    <article>
+        <h3>
+            Evento: {{ evento.nome_evento }} | {{ evento.get_data_evento }}
+        </h3>
+        <div>
+            Descrição: {{ evento.descricao_evento }}
+        </div>
+        <div>
+            Local: {{ evento.local_evento }}
+        </div>
+    </article>
+    <hr>
+    {% endfor %}
+</section>
+{% endblock %}
+

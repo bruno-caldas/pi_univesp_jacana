@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import RedirectView
 
-from cadastro.views import carrega_eventos, carrega_index, carrega_parceiros, mural_animais
+from pijacana.views import carrega_index, carrega_parceiros
+from eventos.views import carrega_eventos
 from cadastro import views
+from eventos import views
 
 urlpatterns = [
     #path('', include('cadastro.urls')),
@@ -26,7 +28,8 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/abrigo/')),
     path('abrigo/', carrega_index, name="index"),
     path('abrigo/parceiros', carrega_parceiros, name="parceiros"),
-    path('abrigo/eventos', carrega_eventos, name="eventos"),
+    #path('abrigo/eventos', carrega_eventos, name="eventos"),
+    path('abrigo/eventos', include("eventos.urls")),
     path('abrigo/mural_animais', include("cadastro.urls")),
     path('login/', include("login_users.urls")),
     #path('abrigo/mural_animais', test_form, name="mural_animais")

@@ -2,20 +2,11 @@
 
 {% block content %}
 
-    <!-- Upload form. Note enctype attribute! -->
-    <form action="{% url 'cadastro:mural_animais' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <p>{{ form.non_field_errors }}</p>
-        <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
-        <p>
-            {{ form.docfile.errors }}
-            {{ form.docfile }}
-        </p>
-        <p>Nome do cachorro: {{ form.nome }}</p>
-        <p>Porte do cachorro (P, M, G): {{ form.porte }}</p>
-        <p>Idade do cachorro: {{ form.idade }}</p>
-        <p><input type="submit" value="Upload" /></p>
-    </form>
+<section>
+    <h2>Mural Fofura</h2>
+    <article>Mural de adoção e apadrinhamento de animais.</article>
+    <article>Curta! Compartilhe!</article>
+</section>
 
     <!-- List of uploaded documents -->
     {% if documents %}
@@ -33,5 +24,21 @@
     {% else %}
         <p>No documents.</p>
     {% endif %}
+
+    <!-- Upload form. Note enctype attribute! -->
+    <form action="{% url 'cadastro:mural_animais' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>{{ form.non_field_errors }}</p>
+        <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+        <p>
+            {{ form.docfile.errors }}
+            {{ form.docfile }}
+        </p>
+        <p>Nome do cachorro: {{ form.nome }}</p>
+        <p>Porte do cachorro (P, M, G): {{ form.porte }}</p>
+        <p>Idade do cachorro: {{ form.idade }}</p>
+        <p><input type="submit" value="Upload" /></p>
+    </form>
+
 
 {% endblock %}
