@@ -10,7 +10,7 @@
     {% for parceiro in parceiros %}
     <article>
         <h3>
-            Parceiro: <a href="{{ parceiro.site_parceiro }}" target="_blank">{{ parceiro.nome_parceiro }}</a>
+            Parceiro: <a href="http://{{ parceiro.site_parceiro }}" target="_blank">{{ parceiro.nome_parceiro }}</a>
         </h3>
         <div>
             Descrição: {{ parceiro.descricao_parceiro }}
