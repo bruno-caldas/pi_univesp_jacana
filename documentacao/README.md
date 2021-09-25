@@ -136,3 +136,37 @@ Link da reunião: https://drive.google.com/file/d/1JZm1xzCb_QMWzK0BPgdKcsgETj_xb
 - A orientadora Carolina verificou as correções e ajustes que seriam necessários para a finalização do Plano de ação;
 - A Carolina orientou para assistir as aulas da quinzena 2;
 - Eduardo ficou responsável pelas alterações e correções do plano de ação;
+
+## 6. Reunião: Apresentação Inicial do Projeto e Termo de Autorização para realização do Projeto
+
+Link da reunião: https://drive.google.com/file/d/1rFZV__8L4lNg1Wl25YW2k_DDUOQRGI0k/view?usp=sharing
+
+### Data: 10/09/2021 19:10​
+
+### Participantes:
+
+- Alexandra Donato
+- Bruno Caldas de Souza
+- Carla Bencic
+- Eduardo Cabral de Souza
+- Vinicius Gomes Barbosa
+
+### Ata da reunião de hoje:
+
+- Nos apresentamos a ideia inicial do site e, também,  o site da Universidade;
+  - Alexandra, explicou sobre a história;
+
+  - Alexandra explicou o papel de cada integrante (voluntário);
+
+  - Possibilidade de colocar os nomes dos voluntários, facebook, intenção da pessoa.
+  Em que você poderia ajudar;
+
+  - Suporte para adotar o cachorro (fale conocsco);
+
+  - Verificar possibilidade de colocar no site uma rifa;
+
+  - Sugestões para estilizar o site;
+
+  - A Carla solicitou o nosso cronograma e a possibilidade de incluir um formulário para entrar em contato, ela deu exemplo.
+
+  - Vinícius pediu para mandar sugestões com informações de campos e demais informações que seriam necessárias.

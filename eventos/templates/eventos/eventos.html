@@ -17,10 +17,10 @@
             Descrição: {{ evento.descricao_evento }}
         </div>
         <div>
-            Local: {{ evento.local_evento }}
+            Local: {{ evento.local_evento }} | <a href="https://www.google.com.br/maps/place/{{ evento.local_evento }}" target="_blank">Como chegar</a>
         </div>
         <div>
-            Parceiros: {{ evento.parceiros }}
+            {% if evento.get_parceiros %}Parceiros: {{ evento.get_parceiros }}{% endif %}
         </div>
     </article>
     <hr>

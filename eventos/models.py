@@ -21,3 +21,14 @@ class Evento(models.Model):
             return True
         else:
             return False
+    def get_parceiros(self):
+        busca_parceiros = list(self.parceiros.all())
+        if busca_parceiros!=0:
+            lista_parceiros = []
+            arruma_lista = Parceiros()
+            for arruma_lista in busca_parceiros:
+                arruma_lista = arruma_lista.nome_parceiro
+                lista_parceiros.append(arruma_lista)
+            return lista_parceiros
+        else:
+            return False
