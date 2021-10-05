@@ -37,7 +37,10 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (

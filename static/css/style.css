@@ -1,0 +1,46 @@
+body {
+    background-color:#F6F7FA;
+    border: 15px;
+}
+
+.barra-superior {
+    border: 15px;
+    background-color:white;
+    text-align: center;
+}
+
+img {
+    border: 5px;
+    border-color: red;
+    border-radius: 50%;
+    width: 50px;
+}
+
+#titulo {
+    border: 15px;
+}
+
+.conteudo-principal {
+    max-width:900px;
+    margin: auto;
+}
+
+.bloco-conteudo {
+    background-color:white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.parceiros {
+    border:15px;
+}
+
+.barra-inferior {
+    border: 15px;
+    border-color: red;
+    background-color:white;
+}
+
+
+

@@ -9,7 +9,7 @@
 
 <section>
     {% for evento in eventos %}
-    <article>
+    <article class="bloco-conteudo">
         <h3>
             Evento: {{ evento.nome_evento }} | {{ evento.get_data_evento }}
         </h3>
@@ -23,7 +23,6 @@
             {% if evento.get_parceiros %}Parceiros: {{ evento.get_parceiros }}{% endif %}
         </div>
     </article>
-    <hr>
     {% endfor %}
 </section>
 {% endblock %}
