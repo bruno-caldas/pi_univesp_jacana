@@ -1,23 +1,23 @@
 {% extends 'templates/../model-page.html' %}
 
 {% block content %}
-<section>
-    <h2>Nossos Parceiros</h2>
-    <article>Confira nossos parceiros.</article>
-</section>
+<section class="parceiros">
+    <section>
+        <h2 id="title">Nossos Parceiros</h2>
+        <article>Confira nossos parceiros.</article>
+    </section>
 
-<section>
-    {% for parceiro in parceiros %}
-    <article>
-        <h3>
-            Parceiro: <a href="http://{{ parceiro.site_parceiro }}" target="_blank">{{ parceiro.nome_parceiro }}</a>
-        </h3>
-        <div>
-            Descrição: {{ parceiro.descricao_parceiro }}
-        </div>
-    </article>
-    <hr>
-    {% endfor %}
+    <section >
+        {% for parceiro in parceiros %}
+        <article class="bloco-conteudo">
+            <h3>
+                Parceiro: <a href="http://{{ parceiro.site_parceiro }}" target="_blank">{{ parceiro.nome_parceiro }}</a>
+            </h3>
+            <div>
+                Descrição: {{ parceiro.descricao_parceiro }}
+            </div>
+        </article>
+        {% endfor %}
+    </section>
 </section>
-
 {% endblock %}

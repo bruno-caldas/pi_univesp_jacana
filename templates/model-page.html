@@ -5,45 +5,50 @@
     <title>Projeto Kaotinho</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{% static 'cadastro/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'cadastro/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   </head>
   <body>
 
     <header>
-      <div align="center">
-        <h1>
-          Projeto Kaotinho
-        </h1>
-        <hr>
-      </div>
-      <div align="center">
-        <nav>
-          <a href="{% url 'index' %}">O abrigo</a> | 
-          <a href="{% url 'parceiros:parceiros' %}"parceiros/">Nossos Parceiros</a> | 
-          <a href="{% url 'eventos:eventos' %}">Projetos e Eventos</a> | 
-          <a href="{% url 'cadastro:mural_animais' %}">Mural Fofura</a>
-        </nav>
-      </div>
-      <div align="right">
-        @projetokaotinho
-        <a href="https://www.facebook.com/projetokaotinho" target="_blank">Facebook</a> | 
-        <a href="https://www.instagram.com/projetokaotinho/" target="_blank">Instagram</a>
-      </div>
+      <section class="barra-superior">
+        <div id="titulo">
+          <h1>
+            <img id="logo" src="{% static 'media/logo.png' %}" alt="logo kaotinho"> Projeto Kaotinho
+          </h1>
+        </div>
+        <div id="navegacao"">
+          <nav>
+            <a href="{% url 'index' %}">O abrigo</a> | 
+            <a href="{% url 'parceiros:parceiros' %}"parceiros/">Nossos Parceiros</a> | 
+            <a href="{% url 'eventos:eventos' %}">Projetos e Eventos</a> | 
+            <a href="{% url 'cadastro:mural_animais' %}">Mural Fofura</a>
+          </nav>
+        </div>
+        <div id="rede-sociais" align="right">
+          @projetokaotinho
+          <a href="https://www.facebook.com/projetokaotinho" target="_blank">Facebook</a> | 
+          <a href="https://www.instagram.com/projetokaotinho/" target="_blank">Instagram</a>
+        </div>
+      </section>
     </header>
 
-    <div class="container">      
-      {% block content %}
-      {% endblock %}
-    </div>
+    <section class="conteudo-principal">
+      <div>      
+        {% block content %}
+        {% endblock %}
+      </div>
+    </section>
 
     <footer>
-      <div align="center">
-        Este site esta sendo desenvolvido pelos alunos da UniVESP - Turma 2020 na disciplina de Projeto Integrador I
-      </div>
+      <section class="barra-inferior">
+        <div align="center">
+          Este site esta sendo desenvolvido pelos alunos da UniVESP - Turma 2020 na disciplina de Projeto Integrador I
+        </div>
+      </section>
     </footer>
 
-    <script src="{% static 'cadastro/ootstrap.min.js' %}">
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}" >
 
   </body>
 

@@ -12,6 +12,7 @@
     {% if documents %}
         <ul>
         {% for document in documents %}
+        <section class="bloco-conteudo">
             <ul>
                 <li><img width="300px" src="{{ document.docfile.url }}"><br>
                     Nome do cachorro: {{ document.nome_cachorro }}
@@ -19,10 +20,14 @@
                     Idade do cachorro: {{ document.idade_cachorro }}
                 </li>
             </ul>
+        </section>
         {% endfor %}
         </ul>
     {% else %}
+    <section class="bloco-conteudo">
         <p>No documents.</p>
+    </section>
+
     {% endif %}
 
     <!-- Upload form. Note enctype attribute! -->

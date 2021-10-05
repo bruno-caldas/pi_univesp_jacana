@@ -31,11 +31,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/abrigo/')),
     path('abrigo/', carrega_index, name="index"),
-    #path('abrigo/parceiros', carrega_parceiros, name="parceiros"),
     path('abrigo/parceiros',include("parceiros.urls")),
-    #path('abrigo/eventos', carrega_eventos, name="eventos"),
     path('abrigo/eventos', include("eventos.urls")),
     path('abrigo/mural_animais', include("cadastro.urls")),
     path('login/', include("login_users.urls")),
-    #path('abrigo/mural_animais', test_form, name="mural_animais")
 ]
