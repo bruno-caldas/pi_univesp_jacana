@@ -14,7 +14,7 @@
         {% for document in documents %}
         <section class="bloco-conteudo">
             <ul>
-                <li><img width="300px" src="{{ document.docfile.url }}"><br>
+                <li><img class="rounded-circle" width="300px" src="{{ document.docfile.url }}"><br>
                     Nome do cachorro: {{ document.nome_cachorro }}
                     Porte do cachorro: {{ document.porte_cachorro }}
                     Idade do cachorro: {{ document.idade_cachorro }}
