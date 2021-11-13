@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'storages',
     'eventos',
     'parceiros',
+    'rede_social'
 ]
 
 MIDDLEWARE = [

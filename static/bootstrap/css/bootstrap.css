@@ -4086,11 +4086,11 @@ textarea.form-control-lg {
 
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.0em;
+  height: 1.0em;
   vertical-align: middle;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: 100%;
 }
 

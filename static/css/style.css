@@ -1,37 +1,15 @@
-body {
-    background-color:#F6F7FA;
+@media(min-width:411px){
+    #titulo {
+        font-size: fs-5;
+    }
 }
 
-.barra-superior {
-    border: 15px;
-    background-color:white;
+.blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
     text-align: center;
-}
-
-
-#titulo {
-    border: 15px;
-}
-
-.conteudo-principal {
-    margin: auto;
-    padding-top: 50px;
-}
-
-.bloco-conteudo {
-    background-color:white;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: justify;
-}
-
-.parceiros {
-    border:15px;
-}
-
-.barra-inferior {
-    text-align:left;
+    background-color: #f9f9f9;
+    border-top: 0.05rem solid #e5e5e5;
 }
 
 
