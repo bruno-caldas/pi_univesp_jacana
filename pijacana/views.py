@@ -9,6 +9,9 @@ from django.views import generic
 def carrega_index(request):
     return render(request, "templates/../index.html")
 
+def carrega_index2(request):
+    return render(request, "templates/../index2.html")
+
 def carrega_parceiros(request):
     return render(request, "templates/../parceiros.html")
 

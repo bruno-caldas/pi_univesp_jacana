@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.views.generic.base import RedirectView
 import parceiros
 
-from pijacana.views import carrega_index, carrega_parceiros
+from pijacana.views import carrega_index, carrega_index2
 from eventos.views import carrega_eventos
 from parceiros.views import carrega_parceiros
 
@@ -31,6 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/abrigo/')),
     path('abrigo/', carrega_index, name="index"),
+    path('abrigo2/', carrega_index2, name="index2"),
     path('abrigo/parceiros',include("parceiros.urls")),
     path('abrigo/eventos', include("eventos.urls")),
     path('abrigo/mural_animais', include("cadastro.urls")),
