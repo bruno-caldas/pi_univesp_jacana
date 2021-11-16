@@ -18,20 +18,22 @@ from django.urls import path, include
 from django.views.generic.base import RedirectView
 import parceiros
 
-from pijacana.views import carrega_index, carrega_index2
-from eventos.views import carrega_eventos
-from parceiros.views import carrega_parceiros
+from pijacana.views import carrega_abrigo, carrega_index, carrega_contatos, carrega_ajuda, carrega_resgate
 
 from cadastro import views
 from eventos import urls, views
 from parceiros import urls, views
 
+app_name = 'pijacana'
 urlpatterns = [
     #path('', include('cadastro.urls')),
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/abrigo/')),
     path('abrigo/', carrega_index, name="index"),
-    path('abrigo2/', carrega_index2, name="index2"),
+    path('abrigo/local', carrega_abrigo, name="abrigo"),
+    path('abrigo/contatos', carrega_contatos, name="contatos"),
+    path('abrigo/ajuda', carrega_ajuda, name="ajuda"),
+    path('abrigo/resgate', carrega_resgate, name="resgate"),
     path('abrigo/parceiros',include("parceiros.urls")),
     path('abrigo/eventos', include("eventos.urls")),
     path('abrigo/mural_animais', include("cadastro.urls")),

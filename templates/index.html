@@ -15,7 +15,7 @@
         <h5>Kãotinho e UniVESP</h5>
         <p>Site desenvolvido pelos alunos da UniVESP</p>
         <p>
-          <a class="btn btn-lg btn-secondary" href="#" role="button">Saiba mais</a>
+          <a class="btn btn-lg btn-secondary" href="{% url 'abrigo' %}" role="button">Saiba mais</a>
         </p>
       </div>
     </div>
@@ -58,110 +58,20 @@
       <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>Como ajudar?</h2>
       <p>Precisamos de você, verifique como ajudar.</p>
-      <p><a class="btn btn-secondary" href="https://getbootstrap.com.br/docs/4.1/examples/carousel/#" role="button">Mais detalhes »</a></p>
+      <p><a class="btn btn-secondary" href="{% url 'ajuda' %}" role="button">Mais detalhes »</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>Resgate de animais</h2>
       <p>Fazemos resgaste de animais domésticos e silvestres.</p>
-      <p><a class="btn btn-secondary" href="https://getbootstrap.com.br/docs/4.1/examples/carousel/#" role="button">Mais detalhes »</a></p>
+      <p><a class="btn btn-secondary" href="{% url 'resgate' %}" role="button">Mais detalhes »</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
       <h2>Nossas redes e contatos</h2>
       <p>Curta, compartilhe e se inscreva em nossas redes.</p>
-      <p><a class="btn btn-secondary" href="https://getbootstrap.com.br/docs/4.1/examples/carousel/#" role="button">Mais detalhes »</a></p>
+      <p><a class="btn btn-secondary" href="{% url 'contatos' %}" role="button">Mais detalhes »</a></p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
-</div>
-<!-- Corpo do site -->
- <div class="row no-gutters" id="corpo-site">
-    <div class="col-md">
-      <section class="conteudo-principal">
-        <section class="bloco-conteudo">
-            <h3>O que é o projeto Kãotinho no Coração?</h2>
-            <article>
-                É um projeto de proteção, cujo objetivo é resgatar e recuperar animais abandonados ou que estejam sofrendo maus-tratos.
-                O nosso projeto é independente e sem fins lucrativos, não estamos envolvidos com ONGs nem com empresas. No entanto, estamos abertos à realização de parcerias, desde que elas respeitem nossos valores e o bem estar dos animais!
-            </article>
-        </section>
-
-        <div class="bloco-conteudo accordion accordion-flush" id="duvidas">
-            <div class="accordion-item">
-              <h4 class="accordion-header font-weight-bold" id="flush-heading-surgiu">
-                <button class="accordion-button collapsed bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-surgiu" aria-expanded="false" aria-controls="flush-collapse-surgiu">
-                    <p class="font-weight-bold">Como Surigiu?</p>Como surgiu?
-                </button>
-              </h4>
-              <div id="flush-collapse-surgiu" class="accordion-collapse collapse" aria-labelledby="flush-heading-surgiu" data-bs-parent="#duvidas">
-                <div class="accordion-body">
-                    O grupo surgiu a partir da união de voluntários, que se conheceram pela internet e resolveram reunir forças para acabar com o sofrimento dos animais que viviam num abrigo em condições precárias. Depois de mais de seis meses, o grupo continuou unido e tomou uma dimensão maior, por isso, resolvemos criar um projeto de proteção, para que possamos dar visibilidade e continuidade ao trabalho que iniciamos no fim do ano passado.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-                <h4 class="accordion-header" id="flush-heading-ajuda">
-                  <button class="accordion-button collapsed bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-ajuda" aria-expanded="false" aria-controls="flush-collapse-ajuda">
-                    Como posso ajudar?
-                  </button>
-                </h4>
-                <div id="flush-collapse-ajuda" class="accordion-collapse collapse" aria-labelledby="flush-heading-ajuda" data-bs-parent="#duvida">
-                  <div class="accordion-body">
-                    Você pode ajudar doando dinheiro, ração, medicamentos, roupinhas, caminhas, casinhas, cobertores, petiscos, produtos de limpeza e produtos para pets em geral.
-                    Você também pode se unir ao nosso grupo como voluntário!
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="flush-heading-dinheiro">
-                  <button class="accordion-button collapsed bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-dinheiro" aria-expanded="false" aria-controls="flush-collapse-dinheiro">
-                    Para que vocês precisam de dinheiro?
-                  </button>
-                </h4>
-                <div id="flush-collapse-dinheiro" class="accordion-collapse collapse" aria-labelledby="flush-heading-dinheiro" data-bs-parent="#duvida">
-                  <div class="accordion-body">
-                    Os animais que chegam até nós, geralmente, estão debilitados, desnutridos e em péssimas condições de saúde, apresentando desde sarna, pulgas, verminoses, doença do carrapato, bicheiras, até de tumores e doenças venéreas. Muitos foram espancados, torturados, atropelados. É um verdadeiro horror, não sabemos de onde esses bichinhos tiram forças para continuar vivos, por isso, por pior que seja o estado dos animais, não desistimos deles. No entanto, eles só podem ser doados depois que estiverem completamente curados, em boas condições de saúde, castrados e vacinados.
-                    Mas para que possamos atuar na recuperação física e emocional dos animais, precisamos de dinheiro, que, muitas vezes, sai de nossos próprios bolsos .
-                    Por isso, para que o nosso trabalho continue, sua doação é muito importante!
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="flush-heading-amigo">
-                  <button class="accordion-button collapsed bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-amigo" aria-expanded="false" aria-controls="flush-collapse-amigo">
-                    Quero adotar um amigo!
-                  </button>
-                </h4>
-                <div id="flush-collapse-amigo" class="accordion-collapse collapse" aria-labelledby="flush-heading-amigo" data-bs-parent="#duvida">
-                  <div class="accordion-body">
-                    Ótimo! O nosso maior sonho é que nossos animais encontrem um lar! Nós vamos te ajudar a escolher um bichinho que combine com você e com a sua família.
-                    No entanto, valorizamos o bem-estar dos animais, portanto, temos um processo rigoroso de entrevista com nossos adotantes, para ter certeza de que eles vão para um lugar seguro, onde serão amados e bem tratados. Não podemos correr o risco de que eles voltem a sofrer novamente.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h4 class="accordion-header" id="flush-heading-localizacao">
-                  <button class="accordion-button collapsed bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-localizacao" aria-expanded="true" aria-controls="flush-collapse-localizacao">
-                    Onde estamos
-                  </button>
-                </h4>
-                <div id="flush-collapse-localizacao" class="accordion-collapse collapse" aria-labelledby="flush-heading-localizacao" data-bs-parent="#duvida">
-                  <div class="accordion-body">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.834013477264!2d-46.61706748556289!3d-23.358027384784123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef1dd1d2b9005%3A0xf5e4e05b57c51268!2sK%C3%A3otinho%20Cl%C3%ADnica%20E%20Hotel%20Canino!5e0!3m2!1spt-BR!2sbr!4v1635554175415!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  </div>
-                </div>
-              </div>
-
-      </div>
-
-</section>
-</div>
-  </div>
-
-
 </div>
 {% endblock %}

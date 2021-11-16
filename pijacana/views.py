@@ -9,11 +9,14 @@ from django.views import generic
 def carrega_index(request):
     return render(request, "templates/../index.html")
 
-def carrega_index2(request):
-    return render(request, "templates/../index2.html")
+def carrega_abrigo(request):
+    return render(request, "templates/../abrigo.html")
 
-def carrega_parceiros(request):
-    return render(request, "templates/../parceiros.html")
+def carrega_contatos(request):
+    return render(request, "templates/../contatos.html")
 
-def carrega_eventos(request):
-    return render(request, "templates/../projetos_eventos.html")
+def carrega_ajuda(request):
+    return render(request, "templates/../ajuda.html")
+
+def carrega_resgate(request):
+    return render(request, "templates/../resgate.html")
