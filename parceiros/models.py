@@ -8,5 +8,6 @@ class Parceiros(models.Model):
     site_parceiro = models.CharField(max_length=250,null=False,blank=False,unique=True,verbose_name='Site',help_text='Insira o site do parceiro')
     class Meta:
         db_table = 'parceiro'
+        ordering = ['nome_parceiro']
     def __str__(self):
         return self.nome_parceiro
