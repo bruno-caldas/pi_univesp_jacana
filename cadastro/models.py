@@ -32,6 +32,19 @@ class Choice(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 class Document(models.Model):
+    SEXO_ANIMAL = (
+        ('M', 'Masculino'),
+        ('F', 'Feminino'),
+        )
+    TIPO_ANIMAL = (
+        ('D', 'Doméstico'),
+        ('S', 'Selvagem'),
+        )
+    PORTE_ANIMAL = (
+        ('P', 'Pequeno'),
+        ('M', 'Médio'),
+        ('G', 'Grande'),
+        )
     # docfile = models.FileField(upload_to='documents/%Y/%m/%d')
     # docfile = models.FileField(upload_to='cadastro/media')
     docfile = models.FileField(upload_to='cadastro/media/%Y_%m_%d')
@@ -39,4 +52,11 @@ class Document(models.Model):
     porte_cachorro = models.CharField(max_length=30)
     idade_cachorro = models.IntegerField(default=0)
     descricao = RichTextField(default='')
+    sexo = models.CharField(null=True,max_length=1,choices=SEXO_ANIMAL, verbose_name='Sexo',help_text='Escolha o sexo do animal.')
+    tipo = models.CharField(null=True,max_length=1,choices=TIPO_ANIMAL, verbose_name='Tipo',help_text='Escolha o tipo do animal.')
+    porte = models.CharField(null=True,max_length=1,choices=PORTE_ANIMAL, verbose_name='Porte',help_text='Escolha o porte do animal.')
+    data_nascimento = models.DateTimeField(null=True,verbose_name='Nascimento',help_text='Coloque a data aproximada de nascimento do animal.')
     # pip install boto3 django-storages
+
+class EspecieAnimal(models.Model):
+    especie = models.CharField(max_length=50,null=False,blank=False,unique=True,verbose_name='Espécie',help_text='Escreve a espécie do animal.')
