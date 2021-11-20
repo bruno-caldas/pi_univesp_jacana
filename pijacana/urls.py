@@ -28,6 +28,7 @@ app_name = 'pijacana'
 urlpatterns = [
     #path('', include('cadastro.urls')),
     path('admin/', admin.site.urls),
+    path('djrichtextfield/', include('djrichtextfield.urls')), #ATIVAÇÃO DE RICH-TEXT
     path('', RedirectView.as_view(url='/abrigo/')),
     path('abrigo/', carrega_index, name="index"),
     path('abrigo/local', carrega_abrigo, name="abrigo"),

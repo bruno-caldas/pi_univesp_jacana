@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib import admin
 from django.utils import timezone
+from djrichtextfield.models import RichTextField
 import datetime
 
 
@@ -37,4 +38,5 @@ class Document(models.Model):
     nome_cachorro = models.CharField(max_length=30)
     porte_cachorro = models.CharField(max_length=30)
     idade_cachorro = models.IntegerField(default=0)
+    descricao = RichTextField(default='')
     # pip install boto3 django-storages
