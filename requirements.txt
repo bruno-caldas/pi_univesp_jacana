@@ -10,3 +10,4 @@ django-heroku==0.3.1
 dj-database-url
 boto3
 django-storages
+richtextfield
