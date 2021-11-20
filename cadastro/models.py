@@ -59,6 +59,6 @@ class Document(models.Model):
     tipo = models.CharField(null=True,max_length=1,choices=TIPO_ANIMAL, verbose_name='Tipo',help_text='Escolha o tipo do animal.')
     porte = models.CharField(null=True,max_length=1,choices=PORTE_ANIMAL, verbose_name='Porte',help_text='Escolha o porte do animal.')
     data_nascimento = models.DateTimeField(null=True,verbose_name='Nascimento',help_text='Coloque a data aproximada de nascimento do animal.')
-    especie_id = models.ForeignKey(EspecieAnimal,on_delete=models.CASCADE)
+    especie_id = models.ForeignKey(EspecieAnimal,on_delete=models.CASCADE, null=True)
     url = models.URLField(null=True,max_length=200)
     # pip install boto3 django-storages
