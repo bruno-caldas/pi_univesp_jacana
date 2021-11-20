@@ -30,7 +30,7 @@
                     Idade do cachorro: {{ document.idade_cachorro }}
                 </div>
                 <div>
-                    Descrição: {{ document.descricao }}
+                    Descrição: {{ document.descricao|safe|escape }}
                 </div>
             </div>
         </div>

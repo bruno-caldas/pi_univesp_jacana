@@ -178,13 +178,33 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 
 #Ativação de RICH-TEXT
+# DJRICHTEXTFIELD_CONFIG = {
+#     'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
+#     'init_template': 'djrichtextfield/init/tinymce.js',
+#     'settings': {
+#         'menubar': False,
+#         'plugins': 'link image',
+#         'toolbar': 'bold italic | link image | removeformat',
+#         'width': 700
+#     }
+# }
 DJRICHTEXTFIELD_CONFIG = {
-    'js': ['//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
-    'init_template': 'djrichtextfield/init/tinymce.js',
+    'js': [
+        '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js',
+        '//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js',
+    ],
+    'css': {
+        'all': [
+            '//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css',
+        ]
+    },
+    'init_template': 'path/to/init/summernote.js',
     'settings': {
-        'menubar': False,
-        'plugins': 'link image',
-        'toolbar': 'bold italic | link image | removeformat',
-        'width': 700
+        'followingToolbar': False,
+        'minHeight': 250,
+        'width': 700,
+        'toolbar': [
+            ['style', ['bold', 'italic', 'clear']],
+        ],
     }
 }
