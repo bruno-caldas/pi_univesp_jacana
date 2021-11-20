@@ -31,6 +31,9 @@ class Choice(models.Model):
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
+class EspecieAnimal(models.Model):
+    especie = models.CharField(max_length=50,null=False,blank=False,unique=True,verbose_name='Espécie',help_text='Escreve a espécie do animal.')
+
 class Document(models.Model):
     SEXO_ANIMAL = (
         ('M', 'Masculino'),
@@ -56,7 +59,6 @@ class Document(models.Model):
     tipo = models.CharField(null=True,max_length=1,choices=TIPO_ANIMAL, verbose_name='Tipo',help_text='Escolha o tipo do animal.')
     porte = models.CharField(null=True,max_length=1,choices=PORTE_ANIMAL, verbose_name='Porte',help_text='Escolha o porte do animal.')
     data_nascimento = models.DateTimeField(null=True,verbose_name='Nascimento',help_text='Coloque a data aproximada de nascimento do animal.')
+    especie_id = models.ForeignKey(EspecieAnimal,on_delete=models.CASDADE)
+    url = models.URLField(verify_exists=True,max_length=200)
     # pip install boto3 django-storages
-
-class EspecieAnimal(models.Model):
-    especie = models.CharField(max_length=50,null=False,blank=False,unique=True,verbose_name='Espécie',help_text='Escreve a espécie do animal.')
