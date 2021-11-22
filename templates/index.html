@@ -1,4 +1,5 @@
 {% extends 'model-page.html' %}
+{% load static %}
 
 {% block content %}
 <!-- Carrossel -->
@@ -10,7 +11,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
+      <img class="univesp-kaotinho" src="https://piunivesp.s3.sa-east-1.amazonaws.com/media/univesp-kaotinho.png" alt="Primeiro Slide"> 
       <div class="carousel-caption d-sd-block">
         <h5>Kãotinho e UniVESP</h5>
         <p>Site desenvolvido pelos alunos da UniVESP</p>
@@ -21,7 +22,7 @@
     </div>
     <div class="carousel-item">
       
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
+      <img class="d-block h-100 w-100 d-inline-block img-carrossel" src="https://piunivesp.s3.sa-east-1.amazonaws.com/media/parceiros3.svg" alt="Segundo Slide">
       <div class="carousel-caption d-sd-block">
         <h5>Nossos Parceiros</h5>
         <p></p>
@@ -31,7 +32,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
+      <img class="d-block h-100 w-100 d-inline-block img-carrossel" src="https://piunivesp.s3.sa-east-1.amazonaws.com/media/eventos3.svg" alt="Terceiro Slide">
       <div class="carousel-caption d-sd-block">
         <h5>Projetos e Eventos</h5>
         <p>Eventos do projeto</p>
@@ -55,20 +56,21 @@
   <!-- Três colunas de texto -->
   <div class="row">
     <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <img class="rounded-circle" src="https://piunivesp.s3.sa-east-1.amazonaws.com/media/ajuda1.png" alt="ajuda" width="140" height="140">
       <h2>Como ajudar?</h2>
       <p>Precisamos de você, verifique como ajudar.</p>
       <p><a class="btn btn-secondary" href="{% url 'ajuda' %}" role="button">Mais detalhes »</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <img class="rounded-circle" src="https://piunivesp.s3.sa-east-1.amazonaws.com/media/resgate1.png" alt="resgate" width="140" height="140">
       <h2>Resgate de animais</h2>
       <p>Fazemos resgaste de animais domésticos e silvestres.</p>
       <p><a class="btn btn-secondary" href="{% url 'resgate' %}" role="button">Mais detalhes »</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-      <h2>Nossas redes e contatos</h2>
+      <img class="rounded-circle" src="https://piunivesp.s3.sa-east-1.amazonaws.com/media/contato1.png" alt="contato" width="140" height="140">
+      <h2>
+        Nossas redes e contatos</h2>
       <p>Curta, compartilhe e se inscreva em nossas redes.</p>
       <p><a class="btn btn-secondary" href="{% url 'contatos' %}" role="button">Mais detalhes »</a></p>
     </div><!-- /.col-lg-4 -->

@@ -13,5 +13,10 @@
     display: block;
 }
 
+.univesp-kaotinho {
+    object-fit: scale-down;
+}
 
-
+.img-carrossel {
+    object-fit: contain;
+}
