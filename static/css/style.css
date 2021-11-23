@@ -20,3 +20,7 @@
 .img-carrossel {
     object-fit: contain;
 }
+
+body {
+    box-sizing: content-box;
+  }
