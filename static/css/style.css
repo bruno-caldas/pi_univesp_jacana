@@ -24,3 +24,7 @@
 body {
     box-sizing: content-box;
   }
+
+p {
+    text-align: justify;
+}
