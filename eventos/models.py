@@ -1,7 +1,9 @@
 from django.db import models
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from parceiros.models import Parceiros
+
+data_atual = datetime.now()
 
 # Create your models here.
 class Evento(models.Model):
@@ -12,13 +14,18 @@ class Evento(models.Model):
     parceiros = models.ManyToManyField(Parceiros,verbose_name='Parceiros',help_text='Insira os parceiros do evento.')
     class Meta:
         db_table = 'evento' #nome definido da tabela no DB
-        ordering = ['-data_evento','nome_evento']
+        ordering = ['data_evento','nome_evento']
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_evento
     def get_data_evento(self): #função para retornar a data formatada
         return self.data_evento.strftime('%d/%m/%Y %H:%M')
+    def get_evento_recente(self):
+        if self.data_evento >= data_atual:
+            return True
+        else:
+            return False
     def get_evento_vencido(self):
-        if self.data_evento < datetime.now():
+        if self.data_evento < data_atual:
             return True
         else:
             return False
