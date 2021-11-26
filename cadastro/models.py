@@ -64,7 +64,7 @@ class Document(models.Model):
     especie = models.ForeignKey(EspecieAnimal,on_delete=models.CASCADE, blank=True, null=True, default=2)
     # url = models.URLField(null=True,max_length=200)
     class Meta:
-        db_table = 'mural_fofura_' #nome definido da tabela no DB
+        db_table = 'mural_fofura' #nome definido da tabela no DB
         ordering = ['nome_cachorro','data_nascimento','tipo','porte']
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_cachorro
