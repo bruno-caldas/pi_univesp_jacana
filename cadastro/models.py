@@ -62,7 +62,7 @@ class Document(models.Model):
     porte = models.CharField(null=True,max_length=1,choices=PORTE_ANIMAL, verbose_name='Porte',help_text='Escolha o porte do animal.')
     data_nascimento = models.DateTimeField(null=True,verbose_name='Nascimento',help_text='Coloque a data aproximada de nascimento do animal.')
     especie = models.ForeignKey(EspecieAnimal,on_delete=models.CASCADE, blank=True, null=True, default=2)
-    # url = models.URLField(null=True,max_length=200)
+    url = models.URLField(null=True,max_length=200)
     class Meta:
         db_table = 'mural_fofura' #nome definido da tabela no DB
         ordering = ['nome_cachorro','data_nascimento','tipo','porte']
