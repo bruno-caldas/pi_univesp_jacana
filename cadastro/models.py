@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.utils import timezone
 from djrichtextfield.models import RichTextField
-import datetime
+from datetime import datetime
 
 data_atual = datetime.now()
 
@@ -70,6 +70,17 @@ class Document(models.Model):
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_cachorro
     def get_idade(self):
-        idade = self.data_nascimento - data_atual
-    return idade
+        idade = int(data_atual - self.data_nascimento)
+        return idade
+    #def get_parceiros(self):
+    #    busca_parceiros = list(self.parceiros.all())
+    #    if busca_parceiros!=0:
+    #        lista_parceiros = []
+    #        arruma_lista = Parceiros()
+    #        for arruma_lista in busca_parceiros:
+    #            arruma_lista = arruma_lista.nome_parceiro
+    #            lista_parceiros.append(arruma_lista)
+    #        return lista_parceiros
+    #    else:
+    #        return False
     # pip install boto3 django-storages
