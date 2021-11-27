@@ -72,8 +72,11 @@ class Document(models.Model):
     def get_idade(self):
         data_atual2 = data_atual.strftime('%d/%m/%Y')
         data_nascimento = self.data_nascimento.strftime('%d/%m/%Y')
+        qtd_dias = abs((data_atual2 - data_nascimento).days)
+        qtd_mes = abs((data_atual2 - data_nascimento).months)
+        qtd_anos = abs((data_atual2 - data_nascimento).years)
         idade = data_atual2 - data_nascimento
-        return idade
+        return qtd_dias
     #def get_parceiros(self):
     #    busca_parceiros = list(self.parceiros.all())
     #    if busca_parceiros!=0:
