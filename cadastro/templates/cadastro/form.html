@@ -27,9 +27,9 @@
         <div class="tab-content p-3 border-secondary shadow" id="myTabContent">
             {% for especie in especies %}
             <div class="tab-pane fade show {% if especie.get_cachorro %} active {% endif %} justify-content-between" id="{{ especie.especie }}" role="tabpanel" aria-labelledby="{{ especie.especie }}-tab">
+                {% if documents %}
+                {% for document in documents %}
                 <div class="row justify-content-center m-1">
-                    {% if documents %}
-                    {% for document in documents %}
                     <div class="col-md-8">
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
@@ -76,13 +76,13 @@
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                    {% else %}
+                {% endfor %}
+                {% else %}
                     <div class="col-md-8">
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="https://piunivesp.s3.amazonaws.com/cadastro/media/2021_11_27/pigno.webp?AWSAccessKeyId=AKIA5ES6RKPKW46IIK66&Signature=AWyGBmn%2BrH%2BYAN4px6En3dtRfCA%3D&Expires=1638033017" class="img-fluid rounded-start" alt="...">
+                                    <img src="{{ document.docfile.url }}" class="img-fluid rounded-start" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -124,8 +124,8 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
+                {% endif %}
             </div>
             {% endfor %}
         </div><!-- Fim do conteúdo do mural de cada espécie -->
