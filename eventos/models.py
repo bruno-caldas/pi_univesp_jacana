@@ -12,9 +12,9 @@ class Evento(models.Model):
     local_evento = models.CharField(max_length=150,verbose_name='Local do Evento',help_text='Exemplo: Rua, número, Bairro, CEP, Município, UF')
     data_evento = models.DateTimeField(verbose_name='Data do Evento',help_text='Data de realização do evento.')
     parceiros = models.ManyToManyField(Parceiros,verbose_name='Parceiros',help_text='Insira os parceiros do evento.')
-    # class Meta:
+    class Meta:
     #     db_table = 'evento' #nome definido da tabela no DB
-    #     ordering = ['data_evento','nome_evento']
+        ordering = ['data_evento','nome_evento']
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_evento
     def get_data_evento(self): #função para retornar a data formatada

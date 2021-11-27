@@ -32,9 +32,9 @@ class Choice(models.Model):
 
 class EspecieAnimal(models.Model):
     especie = models.CharField(max_length=50,null=False,blank=False,unique=True,verbose_name='Espécie',help_text='Escreve a espécie do animal.')
-    # class Meta:
+    class Meta:
     #     db_table = 'especie' #nome definido da tabela no DB
-    #     ordering = ['especie']
+        ordering = ['especie']
     def __str__(self): #correção para admin.py na aparecer como object
         return self.especie
 
@@ -63,9 +63,9 @@ class Document(models.Model):
     data_nascimento = models.DateTimeField(null=True,verbose_name='Nascimento',help_text='Coloque a data aproximada de nascimento do animal.')
     especie = models.ForeignKey(EspecieAnimal,on_delete=models.CASCADE, blank=True, null=True, default=2)
     url = models.URLField(null=True,max_length=200)
-    # class Meta:
+    class Meta:
     #     db_table = 'mural_fofura' #nome definido da tabela no DB
-    #     ordering = ['nome_cachorro','data_nascimento','tipo','porte']
+        ordering = ['nome_cachorro','data_nascimento','tipo','porte']
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_cachorro
     # pip install boto3 django-storages

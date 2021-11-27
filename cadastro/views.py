@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.views import generic
 
 from .models import Choice, Question
-from .models import Document
+from .models import Document, EspecieAnimal
 from .forms import DocumentForm
 
 # import datetime
@@ -67,8 +67,9 @@ def mural_animais(request):
 
     # Load documents for the list page
     documents = Document.objects.all()
+    especies = EspecieAnimal.objects.all()
 
     # Render list page with the documents and the form
     return render(request,
         'cadastro/form.html',
-        {'documents': documents, 'form': form})
+        {'documents': documents,'especies': especies,'form': form})
