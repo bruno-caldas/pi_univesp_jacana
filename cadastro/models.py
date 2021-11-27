@@ -70,7 +70,7 @@ class Document(models.Model):
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_cachorro
     def get_idade(self):
-        idade = int(data_atual - self.data_nascimento)
+        idade = data_atual - self.data_nascimento
         return idade
     #def get_parceiros(self):
     #    busca_parceiros = list(self.parceiros.all())
