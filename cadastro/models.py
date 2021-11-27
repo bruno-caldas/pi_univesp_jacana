@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.utils import timezone
 from djrichtextfield.models import RichTextField
-from datetime import datetime
+from datetime import datetime, timedelta
 
 data_atual = datetime.now()
 
@@ -70,13 +70,15 @@ class Document(models.Model):
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_cachorro
     def get_idade(self):
-        data_atual2 = data_atual.strftime('%d/%m/%Y')
-        data_nascimento = self.data_nascimento.strftime('%d/%m/%Y')
-        qtd_dias = abs((data_atual2 - data_nascimento).days)
-        qtd_mes = abs((data_atual2 - data_nascimento).months)
-        qtd_anos = abs((data_atual2 - data_nascimento).years)
-        idade = data_atual2 - data_nascimento
-        return qtd_dias
+        data_nascimento = self.data_nascimento
+        idade = data_atual - data_nascimento
+        if idade.days >= 365:
+            return '%sY' %int(idade.days / 365)
+        elif idade.days >= 30:
+            return '%sM' %int(idade.days / 30)
+        else:
+            return '%sd' %idade.days
+
     #def get_parceiros(self):
     #    busca_parceiros = list(self.parceiros.all())
     #    if busca_parceiros!=0:
