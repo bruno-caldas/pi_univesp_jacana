@@ -34,7 +34,7 @@
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="https://piunivesp.s3.amazonaws.com/cadastro/media/2021_11_27/pigno.webp?AWSAccessKeyId=AKIA5ES6RKPKW46IIK66&Signature=AWyGBmn%2BrH%2BYAN4px6En3dtRfCA%3D&Expires=1638033017" class="img-fluid rounded-start" alt="...">
+                                    <img src="{{ document.docfile.url }}" class="img-fluid rounded-start" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -57,7 +57,7 @@
                                             </div>
                                             <div class="col-3">
                                                 <svg class="fs-6" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
-                                                {{ document.data_nascimento }}
+                                                {{ document.get_idade }}
                                             </div>
                                         </div>
                                         <div class="row">

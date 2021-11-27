@@ -68,4 +68,7 @@ class Document(models.Model):
         ordering = ['nome_cachorro','data_nascimento','tipo','porte']
     def __str__(self): #correção para admin.py na aparecer como object
         return self.nome_cachorro
+    def get_idade(self):
+        idade = self.data_nascimento - data_atual
+        return idade
     # pip install boto3 django-storages
