@@ -4,6 +4,7 @@ from django.utils import timezone
 from djrichtextfield.models import RichTextField
 import datetime
 
+data_atual = datetime.now()
 
 # Create your models here.
 class Question(models.Model):
@@ -70,5 +71,5 @@ class Document(models.Model):
         return self.nome_cachorro
     def get_idade(self):
         idade = self.data_nascimento - data_atual
-        return idade
+    return idade
     # pip install boto3 django-storages
