@@ -78,7 +78,6 @@ class Document(models.Model):
             return '%sM' %int(idade.days / 30)
         else:
             return '%sd' %idade.days
-
     #def get_parceiros(self):
     #    busca_parceiros = list(self.parceiros.all())
     #    if busca_parceiros!=0:
