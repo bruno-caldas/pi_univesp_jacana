@@ -40,3 +40,12 @@ class Evento(models.Model):
             return lista_parceiros
         else:
             return False
+    def get_falta(self):
+        data = self.data_evento
+        falta = data - data_atual
+        if falta.days >= 365:
+            return '%sY' %int(falta.days / 365)
+        elif falta.days >= 30:
+            return '%sM' %int(falta.days / 30)
+        else:
+            return '%sd' %falta.days

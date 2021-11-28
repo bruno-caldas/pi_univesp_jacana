@@ -19,14 +19,14 @@
         <ul class="nav nav-tabs border-secondy" id="myTab" role="tablist">
             {% for especie in especies %}
             <li class="nav-item" role="presentation">
-                <button class="nav-link {% if especie.get_cachorro %} active {% endif %}" id="{{ especie.especie }}-tab" data-bs-toggle="tab" data-bs-target="#{{especie.especie }}" type="button" role="tab" aria-controls="{{ especie.especie }}" aria-selected="true">{{ especie.especie }}</button>
+                <button class="nav-link {% if especie.get_cachorro %} active {% endif %}" id="{{ especie.especie.lower }}-tab" data-bs-toggle="tab" data-bs-target="#{{ especie.especie.lower }}" type="button" role="tab" aria-controls="{{ especie.especie.lower }}" aria-selected="true">{{ especie.especie }}</button>
             </li>
             {% endfor %}
         </ul><!-- Fim da Aba das especies de animais -->
         <!-- Início do conteúdo do mural de cada espécie -->
         <div class="tab-content p-3 border-secondary shadow" id="myTabContent">
             {% for especie in especies %}
-            <div class="tab-pane fade show {% if especie.get_cachorro %} active {% endif %} justify-content-between" id="{{ especie.especie }}" role="tabpanel" aria-labelledby="{{ especie.especie }}-tab">
+            <div class="tab-pane fade {% if especie.get_cachorro %}show active{% endif %} justify-content-between" id="{{ especie.especie.lower }}" role="tabpanel" aria-labelledby="{{ especie.especie.lower }}-tab">
                 {% if documents %}
                 {% for document in documents %}
                 {% if especie.especie in document.especie %}
@@ -75,13 +75,12 @@
                             </div>
                         </div>
                     </div>
-                {% else %} não
-                {% endif %}
-                {% endfor %}
-                {% endif %}
                 </div>
-            {% endfor %}
+                {% else %} não2: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
+                {% endfor %}
+                {% else %} não1: e.especie {{ especie.especie }}, d.especie {{ document.especie }}  {% endif %}
             </div>
+            {% endfor %}
         </div><!-- Fim do conteúdo do mural de cada espécie -->
     </div>
 </div><!-- Fim do Conteúdo principal -->
