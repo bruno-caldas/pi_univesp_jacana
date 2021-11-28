@@ -27,11 +27,11 @@
         <div class="tab-content p-3 border-secondary shadow" id="myTabContent">
             {% for especie in especies %}
             <div class="tab-pane fade {% if especie.get_cachorro %}show active{% endif %} justify-content-between" id="{{ especie.especie.lower }}" role="tabpanel" aria-labelledby="{{ especie.especie.lower }}-tab">
-                {% if documents %}
-                {% for document in documents %}
-                {% if document.especie == especie.especie %}
                 <div class="row justify-content-center m-1">
                     <div class="col-md-8">
+                        {% if documents %}
+                        {% for document in documents %}
+                        {% if document.especie ==  %}
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
@@ -74,11 +74,11 @@
                                 </div>
                             </div>
                         </div>
+                        {% else %} não2: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
+                        {% endfor %}
+                        {% else %} não1: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
                     </div>
                 </div>
-                {% else %} não2: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
-                {% endfor %}
-                {% else %} não1: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
             </div>
             {% endfor %}
         </div><!-- Fim do conteúdo do mural de cada espécie -->
