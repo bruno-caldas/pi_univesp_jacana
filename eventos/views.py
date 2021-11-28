@@ -6,12 +6,12 @@ from django.urls import reverse
 from django.views import generic
 
 from eventos.models import Evento
+from parceiros.models import Parceiros
 
 #CARREGA AS PÁGINAS PRINCIPAIS
 
 def carrega_eventos(request):
-    evento = Evento.objects.all()
-    response = {'eventos':evento}
-    return render(request, 'eventos/eventos.html',response)
+    eventos = Evento.objects.all()
+    return render(request,'eventos/eventos.html',{'eventos':eventos })
 
 # Create your views here.

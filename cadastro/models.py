@@ -78,6 +78,10 @@ class Document(models.Model):
             return '%sM' %int(idade.days / 30)
         else:
             return '%sd' %idade.days
+    def get_especie(self):
+        busca_especie = list(self.especie.all())
+        return busca_especie
+    
     #def get_parceiros(self):
     #    busca_parceiros = list(self.parceiros.all())
     #    if busca_parceiros!=0:
@@ -89,4 +93,8 @@ class Document(models.Model):
     #        return lista_parceiros
     #    else:
     #        return False
+    #def get_evento_recente(self):
+    #    if self.data_evento >= data_atual:
+    #        return True
+    #    else:
     # pip install boto3 django-storages
