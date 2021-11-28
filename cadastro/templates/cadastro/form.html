@@ -31,7 +31,6 @@
                     <div class="col-md-8">
                         {% if documents %}
                         {% for document in documents %}
-                        {% if document.especie ==  %}
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
@@ -74,7 +73,6 @@
                                 </div>
                             </div>
                         </div>
-                        {% else %} não2: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
                         {% endfor %}
                         {% else %} não1: e.especie {{ especie.especie }}, d.especie {{ document.especie }} {% endif %}
                     </div>
