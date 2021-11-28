@@ -29,7 +29,7 @@
             <div class="tab-pane fade show {% if especie.get_cachorro %} active {% endif %} justify-content-between" id="{{ especie.especie }}" role="tabpanel" aria-labelledby="{{ especie.especie }}-tab">
                 {% if documents %}
                 {% for document in documents %}
-                {% if especie.especie is document.especie %}
+                {% if especie.especie in document.especie %}
                 <div class="row justify-content-center m-1">
                     <div class="col-md-8">
                         <div class="card mb-3" style="max-width: 540px;">
@@ -66,7 +66,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col">
+                                            <div class="col-12">
                                                 <a class="btn btn-secondary" href="{{ document.url }}" role="button" target="_blank">Confira!</a>
                                             </div>
                                         </div>
@@ -75,6 +75,7 @@
                             </div>
                         </div>
                     </div>
+                {% else %} não
                 {% endif %}
                 {% endfor %}
                 {% endif %}
